@@ -15,7 +15,7 @@ float area(int a,int b)
 }
 float area(int a)
 {
-
+  float res=sqrt(3)/4*a*a;
   return res;
 }
 int main()
