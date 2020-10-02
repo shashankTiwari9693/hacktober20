@@ -1,0 +1,33 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+float area(int a,int b,int c)
+{
+  float s=(a+b+c)/2;
+  float ar=s*(s-a)*(s-b)*(s-c);
+  float res=pow(ar,0.5);
+  return res;
+}
+float area(int a,int b)
+{
+  float res=(b/4*sqrt(4*a*a-b*b));
+  return res;
+}
+float area(int a)
+{
+
+  return res;
+}
+int main()
+{
+  int a,b,c;
+  cout<<"enter the a"<<"\n";
+  cin>>a;
+  cout<<"enter the b"<<"\n";
+  cin>>b;
+  cout<<"enter the c"<<"\n";
+  cin>>c;
+  cout<<"Area of Scalene Triangle is"<<area(a,b,c)<<"\n";
+  cout<<"Area of isoscele Triangle is"<<area(a,b)<<"\n";
+  cout<<"Area of equilateral Triangle is"<<area(a)<<"\n";
+}
