@@ -1,0 +1,112 @@
+#include<iostream>
+using namespace std;
+#define MAX 10
+class Book
+{
+        public:
+                int price;
+                char author[30];
+                char title[30];
+                int  pages;
+        public:
+                void get()
+                {
+                        cout<<"\n Enter Title of Book   :  ";
+                        cin>>title;
+                        cout<<"\n Enter name of author  :  ";
+                        cin>>author;
+
+                }
+};
+class Print_book:public Book
+{
+        public:
+              int weight;
+        public:
+                void get_pb()
+                {
+                        cout<<"\n Enter the no. of pages: ";
+                        cin>>pages;
+                        cout<<"\n Enter the weight of book: ";
+                        cin>>weight;
+                }
+
+                void show_pb()
+                {
+                        cout<<"\n ------------Printed Book--------------\n";
+                        cout<<"\n Book Title         :  "<<title;
+                        cout<<"\n Author Name        :  "<<author;
+                        cout<<"\n Weight of book     :  "<<weight;
+                        cout<<"\n Price of book      :  "<<price;
+                        cout<<"\n no. of pages       :  "<<pages;
+                        cout<<"\n ----------------------------------\n";
+                }
+};
+class E_book:public Book
+{
+        public:
+              int size;
+        public:
+                void get_eb()
+                {
+                        cout<<"\n Enter the no. of pages: ";
+                        cin>>pages;
+                        cout<<"\n Enter the size of book in KB: ";
+                        cin>>size;
+                }
+
+                void show_eb()
+                {
+                        cout<<"\n ------------E-Book--------------\n";
+                        cout<<"\n Book Title         :  "<<title;
+                        cout<<"\n Author Name        :  "<<author;
+                        cout<<"\n Size of book in KB :  "<<size;
+                        cout<<"\n Price of book      :  "<<price;
+                        cout<<"\n no. of pages       :  "<<pages;
+                        cout<<"\n ----------------------------------\n";
+                }
+};
+int main()
+{
+  int x,m,n;
+Print_book p[MAX];
+E_book e[MAX];
+cout<<"Enter type of book: \nFor Printed Book, press 1 \nFor E-Book, press 2  \n";
+cin>>x;
+if(x==1)
+{
+ cout<<"Enter total no. of Printed book:   ";
+ cin>>m;
+
+ for (int i=0;i<m;i++)
+ {
+   cout<<"Enter details for Book "<<i+1<<" :   \n";
+   p[i].get();
+   p[i].get_pb();
+ }
+ cout<<endl;
+ for (int i=0;i<m;i++)
+ {
+   cout<<"Details for Book "<<i+1<<" :   \n";
+   p[i].show_pb();
+ }
+}
+else if (x==2)
+{
+ cout<<"Enter total no. of E-book:   ";
+ cin>>n;
+
+ for (int i=0;i<n;i++)
+ {
+   cout<<"Enter details for E-Book" <<i+1<<" :   \n";
+   e[i].get();
+   e[i].get_eb();
+ }
+ cout<<endl;
+ {
+   cout<<"Details for E-Book "<<i+1<<" :   \n";
+   e[i].show_eb();
+ }
+}
+
+}
