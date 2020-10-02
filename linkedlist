@@ -41,7 +41,7 @@
        else
 {
          printf("data are");
-        
+        temp=start;
          while(temp!=NULL )
          {
            printf("node %d ",temp->data);
