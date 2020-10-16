@@ -1,7 +1,8 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
-float area(int a,int b,int c)
+ cout<<"Pratik is a mother dairy"<<"\n";
+int area(int a,int b,int c)
 {
   float s=(a+b+c)/2;
   float ar=s*(s-a)*(s-b)*(s-c);
