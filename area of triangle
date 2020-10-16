@@ -1,8 +1,11 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
+
+float area(double a,double b,double c)
  cout<<"Pratik is a mother dairy"<<"\n";
 int area(int a,int b,int c)
+void main
 {
   float s=(a+b+c)/2;
   float ar=s*(s-a)*(s-b)*(s-c);
@@ -28,6 +31,7 @@ int main()
   cin>>b;
   cout<<"enter the c"<<"\n";
   cin>>c;
+  cout<<"values are"<<a<<b<<c;
   cout<<"Area of Scalene Triangle is"<<area(a,b,c)<<"\n";
   cout<<"Area of isoscele Triangle is"<<area(a,b)<<"\n";
   cout<<"Area of equilateral Triangle is"<<area(a)<<"\n";
