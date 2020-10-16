@@ -1,7 +1,7 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
-float area(int a,int b,int c)
+float area(double a,double b,double c)
 {
   float s=(a+b+c)/2;
   float ar=s*(s-a)*(s-b)*(s-c);
@@ -27,6 +27,7 @@ int main()
   cin>>b;
   cout<<"enter the c"<<"\n";
   cin>>c;
+  cout<<"values are"<<a<<b<<c;
   cout<<"Area of Scalene Triangle is"<<area(a,b,c)<<"\n";
   cout<<"Area of isoscele Triangle is"<<area(a,b)<<"\n";
   cout<<"Area of equilateral Triangle is"<<area(a)<<"\n";
