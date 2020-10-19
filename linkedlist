@@ -5,7 +5,8 @@
   {
     int data;
     struct node *next,*pre;
-  }*start,*end,*temp;
+  };
+  struct node *start,*end,*temp;
 
 
   void create(int m)
@@ -32,11 +33,11 @@
       temp=NULL;
     }
   }
-       void display()
+       void printit()
    {
        if(start==NULL)
        {
-         printf("NO DATA FOUND \n");
+        printf("not got it man");
        }
        else
 {
@@ -54,11 +55,11 @@
 
    void main()
    {
-     int s=0,c=0,mt,y,x;
-     while(c==0)
+     int s=0,check=0,mt,y,x;
+     while(check==0)
      {
        printf("press 1 to create linked list \n"
-       "press 2 to display linked list\n");
+       "press 2 to printit linked list\n");
        scanf("%d",&x);
        switch(x)
        {
@@ -77,11 +78,11 @@
           }
           case 2:
           {
-            display();
+            printit();
             break;
           }
        }
        printf("\n for more operation,press 0");
-       scanf("%d",&c);
+       scanf("%d",&check);
      }
    }
