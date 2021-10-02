@@ -25,6 +25,7 @@ class Array {
 		        str.append(res.get(i)+" ");
 		    }
 		    System.out.println(str);
+		    System.out.println("hello");
 		}
 		
 	}
